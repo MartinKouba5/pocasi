@@ -1,0 +1,41 @@
+#predpoved{
+
+
+}
+#pozadi{
+    background-color: rgba(0, 0, 0, 0.429);
+    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    padding: 5px;
+}
+.WeatherCard {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding:25px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+
+    
+  }
+
+  h2,h3{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+
+
+
+
+}
+
+p{
+    color:white;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+
+}
+  
+ 
