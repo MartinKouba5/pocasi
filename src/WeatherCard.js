@@ -47,7 +47,7 @@ function WeatherCard({ cityName, latitude, longitude,backgroundImage }) {
       )}
       {forecast ? (
         
-        <div id="pozadi"style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div id="pozadi"class="d-flex justify-content-center">
           {forecast.map((day, i) => {
             const date = new Date(Date.now() + (i + 1) * 24 * 60 * 60 * 1000);
             const formattedDate = `${date.getDate().toString().padStart(2, '0')}.${(date.getMonth() + 1).toString().padStart(2, '0')}.${date.getFullYear()}`;

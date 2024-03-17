@@ -37,11 +37,20 @@
   }
 }
 body{
-  margin: 25px;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
 
 }
 
+.pocasi{
+  margin: 25px;
+
+}
+.banner{
+}
 
 
-
+h1{
+  text-align: center;
+}
 
