@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './WeatherCard.css';
 
-function WeatherCard({ cityName, latitude, longitude,backgroundImage }) {
+function WeatherCard({ cityName, latitude, longitude,backgroundImage, locationName }) {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
 
@@ -29,6 +29,7 @@ function WeatherCard({ cityName, latitude, longitude,backgroundImage }) {
   return (
     <div className="WeatherCard" style={{ backgroundImage: `url(${backgroundImage})` }} >
       <h2>{cityName}</h2>
+      <h3>{locationName}</h3>
       {currentWeather ? (
         <div>
           <h3><strong><svg xmlns="http://www.w3.org/2000/svg" width="50" height="auto" fill="currentColor" class="bi bi-thermometer" viewBox="0 0 16 16">

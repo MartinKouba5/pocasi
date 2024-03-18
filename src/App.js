@@ -1,5 +1,7 @@
 // App.js
 import React, { useState } from 'react';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import LoginPage from './Login';
 import WeatherCard from './WeatherCard'; 
@@ -14,9 +16,24 @@ function WeatherApp({ onLogout }) { // Přidána prop onLogout
     setCities([city, ...cities]);
   };
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyB-DT6ioBb8-D9eEyjPNgSqLzZ6v4o-sh8",
+    authDomain: "pocasi-f4ecf.firebaseapp.com",
+    projectId: "pocasi-f4ecf",
+    storageBucket: "pocasi-f4ecf.appspot.com",
+    messagingSenderId: "49908304835",
+    appId: "1:49908304835:web:1427d9923fb578b4578b76",
+    measurementId: "G-8YVYHPRZME"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+
   return (
     <div className="App">
-      <Navbar onLogout={onLogout}></Navbar>
+      <Navbar onLogout={onLogout} isLoggedIn={true}></Navbar> {/* Předána prop isLoggedIn */}
       <div class="banner">
         <SearchBar onSearch={handleSearch}></SearchBar>
       </div>

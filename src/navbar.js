@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = ({ onLogout }) => {
+const Navbar = ({ onLogout, isLoggedIn }) => { // Přidána prop isLoggedIn
   const handleLogout = () => {
     onLogout();
   };
@@ -18,9 +18,11 @@ const Navbar = ({ onLogout }) => {
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
           </ul>
-          <form class="d-flex ml-auto"> 
-            <button class="btn btn-info" type="button" onClick={handleLogout}>Odhlásit se</button>
-          </form>
+          {isLoggedIn && ( // Tlačítko "Odhlásit se" se zobrazí pouze pokud je uživatel přihlášen
+            <form class="d-flex ml-auto"> 
+              <button class="btn btn-info" type="button" onClick={handleLogout}>Odhlásit se</button>
+            </form>
+          )}
         </div>
       </div>
     </nav>
