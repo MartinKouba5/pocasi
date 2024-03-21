@@ -12,10 +12,11 @@ const Navbar = ({ onLogout, isLoggedIn }) => { // Přidána prop isLoggedIn
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">Počasí</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/7477/7477790.png" width="43" height="auto"></img>
+
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Goofy počasí</a>
             </li>
           </ul>
           {isLoggedIn && ( // Tlačítko "Odhlásit se" se zobrazí pouze pokud je uživatel přihlášen
